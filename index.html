@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts about a Hiking Enthusiast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts about a Hiking Enthusiast</h1>
+    <button id="factButton">Show a Fun Fact</button>
+    <p id="factDisplay"></p>
+    <script>
+        const facts = [
+            "This person has hiked over 500 miles across various national parks.",
+            "They have a collection of souvenirs from each national park visited.",
+            "They can identify over 50 different species of plants and animals.",
+            "This hiking enthusiast has experienced all four seasons through their hikes.",
+            "They have participated in volunteer programs within national parks.",
+            "Their favorite national park is Yosemite.",
+            "They maintain a detailed hiking journal.",
+            "This person has inspired others to start hiking.",
+            "They have a goal to hike in every national park in the United States.",
+            "They practice mindfulness and photography during their hikes."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
